@@ -1,61 +1,62 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DH Livros</title>
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/7437/7437032.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <title>Leiturama</title>
 </head>
+
 <body>
-    <header>
-        <div class="headerImg">
-            <img src="https://images.pexels.com/photos/2465877/pexels-photo-2465877.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="" class="imagemTopo">
-        </div>
-        <div class="headerText">
-            <h1>MINHA BIBLIOTECA VIRTUAL</h1>
-        <h2>Adicione seus livros favoritos pelo formulário abaixo</h2>
-        </div>
-    </header>
-    
-    <main>
-        <div class="inserir">
-            <form action="">
-                <label for="titulo">Título</label>
-                <input type="text" id="inputPadrao" class="titulo" id="algo">
+  <header>Leiturama</header>
+  <section>
+    <form id="register">
+      <h3>Cadastre um livro</h3>
+      <label for="bookName">Insira o nome do livro:</label>
+      <input type="text" name="bookName" id="bookName">
+      <label for="bookAuthor">Insira o autor do livro:</label>
+      <input type="text" name="bookAuthor" id="bookAuthor">
+      <label for="bookPublisher">Insira a editora do livro:</label>
+      <input type="text" name="bookPublisher" id="bookPublisher">
+      <label for="numberOfPages">Insira a quantidade de páginas:</label>
+      <input type="number" name="numberOfPages" id="numberOfPages">
+      <label for="bookCover">Insira o link da capa:</label>
+      <input type="text" name="bookCover" id="bookCover">
+      <label for="synopsis">Insira a sinopse:</label>
+      <textarea name="synopsis" id="synopsis" cols="50" rows="10"></textarea>
+      <button id="btnRegister">Cadastre</button>
+    </form>
 
-                <label for="imagem">Imagem</label>
-                <input type="url" placeholder="Digite a URL da imagem" id="inputPadrao" class="imagem">
+    <div id="myModal" class="modal">
+      <div id="contentModel" class="modal-content">
+        <span id="btnCloseModal">&times;</span>
+        <h3 id="modalTitle"></h3>
+        <p id="txtSynopsis"></p>
+      </div>
+    </div>
+<!--busca de livros-->
+    <div id="listOfBooksSearch">
+      <h3>Busque um livro</h3>
+      <label for="bookNameSearch">Digite o livro que deseja procurar:</label>
+      <input type="text" name="bookNameSearch" id="bookNameSearch">
+      <button id="btnSearch">Buscar</button>
+      <div id="foundBooks"></div>
+    </div>
 
-                <label for="autor">Autor</label>
-                <input type="text" id="inputPadrao" class="autor">
+    <div id="AllBooks">
+      <h3 id="titleAllBooks">Todos os Livros</h3>
+      <div id="listOfAllBooks">
+        <p  id="emptyBookList">Nenhum livro cadastrado</p>
+      </div>
+    </div>
+  </section>
 
-                <label for="sinopse">Sinopse</label>
-                <textarea id="textArea" maxlength="200" placeholder="Máximo de 200 caracteres"></textarea>
-
-                <input type="submit" class="enviar" value="Adicionar">
-            </form>
-        </div>
-
-        <div class="novosCards">
-            <img src="" alt="" class="imgStilos">
-        </div>
-        
-    </main>
-
-    <footer>
-        <div class="alunos">
-            <article class="helter">
-                Helter Emanoel
-            </article>
-
-            <article class="cintia">
-                Cintia Rodrigues
-            </article>
-        </div>
-        <a href="https://www.digitalhouse.com/br" id="digitalHouse">&copy Digital House - Brasil</a>
-    </footer>
-    <script src="./app.js"></script>
+  <script src="/app.js"></script>
 </body>
+
 </html>
