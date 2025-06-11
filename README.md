@@ -1,74 +1,44 @@
-# Biblioteca Digital - Lista de Livros
+# 📚 Biblioteca Digital - Lista de Livros
 
-Este projeto é uma aplicação web simples para exibir uma lista de livros com seus detalhes, permitindo ao usuário visualizar a sinopse em um modal acessível, alternar entre tema claro e escuro, além de exportar a lista para arquivos Excel e PDF.
-
----
-
-## Funcionalidades
-
-- Exibição da lista de livros com capa, título, autor, editora e número de páginas.
-- Modal para exibição da sinopse do livro com foco preso para melhorar a acessibilidade.
-- Botões para exportar a lista completa para:
-  - Excel (.xlsx) usando a biblioteca [SheetJS](https://sheetjs.com/)
-  - PDF (.pdf) usando a biblioteca [jsPDF](https://github.com/parallax/jsPDF)
-- Alternância entre modo claro e modo escuro para melhor usabilidade.
+Este projeto é uma aplicação web simples e acessível que permite listar livros com seus respectivos detalhes, visualizar sinopses em modais acessíveis, alternar entre tema claro e escuro e exportar a lista para arquivos Excel ou PDF.
 
 ---
 
-## Tecnologias utilizadas
+## ✨ Funcionalidades
 
-- HTML5 e CSS3 (incluindo suporte a tema claro/escuro)
-- JavaScript ES6+
-- [SheetJS (xlsx)](https://sheetjs.com/) para exportação Excel
-- [jsPDF](https://github.com/parallax/jsPDF) para exportação PDF
-- FontAwesome para ícones (opcional)
-
----
-
-## Como usar
-
-1. Clone este repositório ou baixe os arquivos.
-2. Abra o arquivo `index.html` em um navegador moderno (Chrome, Firefox, Edge, etc).
-3. Visualize a lista de livros, clique no botão "Sinopse" para ver a descrição detalhada em um modal.
-4. Use os botões "Exportar Excel" e "Exportar PDF" para baixar a lista em seus respectivos formatos.
-5. Use o botão "Modo Escuro" para alternar entre os temas claro e escuro.
-
----
-
-## Estrutura do projeto
-├── index.html # Arquivo principal com HTML e referência a CSS/JS
-├── stile.css # Estilos CSS para layout, modal e temas
-├── script.js # Lógica JavaScript para interação e exportação
-└── README.md # Este arquivo de documentação
+- ✅ Exibição da lista de livros com:
+  - Capa
+  - Título
+  - Autor
+  - Editora
+  - Número de páginas
+- ✅ Modal para visualização da **sinopse**, com:
+  - Foco preso (focus trap)
+  - Suporte ao teclado (`ESC` para fechar)
+  - Atributos ARIA para acessibilidade
+- ✅ Alternância de tema:
+  - 🌞 Modo claro
+  - 🌙 Modo escuro
+- ✅ Exportação da lista:
+  - 📄 Excel (.xlsx) via [SheetJS](https://sheetjs.com/)
+  - 📄 PDF (.pdf) via [jsPDF](https://github.com/parallax/jsPDF)
 
 ---
 
-## Acessibilidade
+## 🛠️ Tecnologias utilizadas
 
-- O modal possui "focus trap", que mantém o foco dentro do modal enquanto ele estiver aberto.
-- Modal pode ser fechado com o botão de fechar ou tecla `Esc`.
-- Uso de atributos ARIA para melhor suporte a leitores de tela.
-
----
-
-## Personalização
-
-- Para alterar a lista de livros, edite o array `allBooks` no arquivo `script.js` com os dados desejados.
-- Para alterar estilos, modifique o arquivo `stile.css`.
+- HTML5 + CSS3 (com suporte a temas e responsividade)
+- JavaScript moderno (ES6+)
+- [SheetJS (xlsx)](https://sheetjs.com/) – exportação para Excel
+- [jsPDF](https://github.com/parallax/jsPDF) – exportação para PDF
+- FontAwesome – ícones interativos
 
 ---
 
-## Dependências externas
+## 🚀 Como usar
 
-As seguintes bibliotecas são carregadas via CDN:
+1. Clone este repositório ou baixe os arquivos ZIP:
+   ```bash
+   git clone https://github.com/seu-usuario/biblioteca-digital.git
 
-- SheetJS (XLSX):  
-```html
-<script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
-
-FontAwesome (para ícones):
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
-Contribuições
-Contribuições são bem-vindas! Para sugerir melhorias ou reportar problemas, abra uma issue ou envie um pull request.
 
